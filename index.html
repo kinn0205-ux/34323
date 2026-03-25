@@ -5,31 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="e3GwbSory55dmwk_Ehy4gfPF45wQtd25b4SWQZKb-1Q" />
 <meta name="yandex-verification" content="d1840ee96bbb5f73" />
-<meta name="description" content="Разработка сайтов под ключ: лендинги, корпоративные сайты, интернет-магазины. Адаптивный дизайн, чистый код, сроки. Санкт-Петербург." />
-<meta name="keywords" content="разработка сайтов, лендинг, веб-дизайн, фронтенд, Санкт-Петербург" />
-<meta property="og:title" content="Максим | Разработка сайтов под ключ" />
-<meta property="og:description" content="Современные сайты для бизнеса. Быстро, качественно, с поддержкой." />
+<meta name="description" content="Профессиональная фотосъёмка в Санкт-Петербурге: портреты, свадьбы, love story, семейные фотосессии. Катерина Кинн — фотограф с душой." />
+<meta name="keywords" content="фотограф Санкт-Петербург, фотосессия, портретная съёмка, свадебный фотограф, семейный фотограф, Катерина Кинн" />
+<meta property="og:title" content="Катерина Кинн | Профессиональный фотограф Санкт-Петербург" />
+<meta property="og:description" content="Запечатлею ваши самые важные моменты. Индивидуальный подход, тёплая атмосфера, живые эмоции." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://program-site-ebon.vercel.app" />
-<meta property="og:image" content="https://program-site-ebon.vercel.app/og-preview.jpg" />
+<meta property="og:url" content="https://katerina-kinn-photo.vercel.app" />
+<meta property="og:image" content="https://katerina-kinn-photo.vercel.app/og-preview.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Максим - разработка сайтов под ключ" />
+<meta property="og:image:alt" content="Катерина Кинн - профессиональный фотограф" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Максим | Разработка сайтов под ключ" />
-<meta name="twitter:description" content="Современные сайты для бизнеса. Быстро, качественно, с поддержкой." />
-<meta name="twitter:image" content="https://program-site-ebon.vercel.app/og-preview.jpg" />
-<title>Максим | Разработка сайтов под ключ</title>
+<meta name="twitter:title" content="Катерина Кинн | Профессиональный фотограф" />
+<meta name="twitter:description" content="Запечатлею ваши самые важные моменты. Индивидуальный подход, тёплая атмосфера." />
+<meta name="twitter:image" content="https://katerina-kinn-photo.vercel.app/og-preview.jpg" />
+<title>Катерина Кинн | Профессиональный фотограф Санкт-Петербург</title>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
---bg-color: #0a0e17;
---text-color: #e2e8f0;
---accent-color: #00d4ff;
---accent-secondary: #7c3aed;
---card-bg: rgba(30, 41, 59, 0.7);
---success: #10b981;
+--bg-color: #FDF8F3;
+--bg-secondary: #F5EFE6;
+--text-color: #4A4A4A;
+--text-light: #6B6B6B;
+--accent-color: #C9A87C;
+--accent-secondary: #D4B896;
+--card-bg: rgba(255, 255, 255, 0.85);
+--success: #7CB342;
+--border-color: #E8DDD4;
 }
 * {
 margin: 0;
@@ -37,14 +40,14 @@ padding: 0;
 box-sizing: border-box;
 }
 body {
-font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
 background-color: var(--bg-color);
 color: var(--text-color);
 overflow-x: hidden;
 line-height: 1.6;
 }
-/* --- ПАРАЛЛАКС ФОН --- */
-.code-background {
+/* --- ФОН С СЕМЕЙНЫМ ФОТО --- */
+.photo-background {
 position: fixed;
 top: 0;
 left: 0;
@@ -52,47 +55,22 @@ width: 100%;
 height: 100vh;
 z-index: -1;
 overflow: hidden;
-background: linear-gradient(180deg, #0a0e17 0%, #111827 100%);
+/* ЛОКАЛЬНОЕ ФОТО с лёгким бежевым наложением */
+background: linear-gradient(135deg, rgba(253, 248, 243, 0.60) 0%, rgba(245, 239, 230, 0.65) 100%),
+url('./hero-bg.jpg') center/cover no-repeat fixed;
 }
-.code-lines {
+.floating-element {
 position: absolute;
-width: 100%;
-height: 200%;
-font-family: 'JetBrains Mono', monospace;
-font-size: 13px;
-color: rgba(0, 212, 255, 0.06);
-line-height: 1.8;
-padding: 20px;
-white-space: pre;
-overflow: hidden;
-user-select: none;
-}
-.grid-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100vh;
-background-image:
-linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-background-size: 50px 50px;
-z-index: -1;
-pointer-events: none;
-}
-.floating-code {
-position: absolute;
-font-family: 'JetBrains Mono', monospace;
 color: var(--accent-color);
-opacity: 0.1;
-font-size: 12px;
-animation: float 20s infinite linear;
+opacity: 0.12;
+font-size: 20px;
+animation: float 25s infinite linear;
 pointer-events: none;
 }
 @keyframes float {
 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-10% { opacity: 0.15; }
-90% { opacity: 0.15; }
+10% { opacity: 0.12; }
+90% { opacity: 0.12; }
 100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 /* --- КОНТЕНТ --- */
@@ -113,17 +91,17 @@ backdrop-filter: blur(10px);
 position: sticky;
 top: 0;
 z-index: 100;
-background: rgba(10, 14, 23, 0.9);
-border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+background: rgba(253, 248, 243, 0.95);
+border-bottom: 1px solid var(--border-color);
 }
 .logo {
-font-family: 'JetBrains Mono', monospace;
+font-family: 'Cormorant Garamond', serif;
 font-weight: 600;
-font-size: 1.5rem;
+font-size: 1.8rem;
 color: var(--accent-color);
-text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+letter-spacing: 2px;
 }
-.logo span { color: var(--accent-secondary); }
+.logo span { color: var(--text-color); }
 nav ul {
 display: flex;
 gap: 30px;
@@ -134,6 +112,7 @@ font-size: 0.95rem;
 transition: 0.3s;
 position: relative;
 color: var(--text-color);
+font-weight: 400;
 }
 nav a::after {
 content: '';
@@ -141,7 +120,7 @@ position: absolute;
 bottom: -5px;
 left: 0;
 width: 0;
-height: 2px;
+height: 1px;
 background: var(--accent-color);
 transition: 0.3s;
 }
@@ -164,18 +143,19 @@ gap: 5px;
 .contact-link:hover { color: var(--accent-color); }
 .btn {
 background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-color: var(--bg-color);
+color: #fff;
 padding: 12px 28px;
-border-radius: 5px;
-font-weight: 600;
+border-radius: 3px;
+font-weight: 500;
 transition: 0.3s;
 border: none;
 cursor: pointer;
-font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
 position: relative;
 overflow: hidden;
 text-decoration: none;
 display: inline-block;
+letter-spacing: 0.5px;
 }
 .btn::before {
 content: '';
@@ -190,9 +170,9 @@ transition: 0.5s;
 .btn:hover::before { left: 100%; }
 .btn:hover {
 transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+box-shadow: 0 10px 30px rgba(201, 168, 124, 0.3);
 }
-/* HERO SECTION С ФОНОВЫМ ИЗОБРАЖЕНИЕМ */
+/* HERO SECTION */
 .hero {
 min-height: 100vh;
 display: flex;
@@ -201,39 +181,37 @@ justify-content: center;
 text-align: center;
 flex-direction: column;
 padding: 100px 0;
-/* Фоновое изображение */
-background-image: 
-    linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.8)),
-    url('./hero-bg.jpg');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-position: relative;
 }
 .hero-badge {
-background: rgba(0, 212, 255, 0.1);
+background: rgba(201, 168, 124, 0.2);
 border: 1px solid var(--accent-color);
-padding: 8px 16px;
-border-radius: 20px;
+padding: 8px 20px;
+border-radius: 25px;
 font-size: 0.85rem;
 margin-bottom: 25px;
-font-family: 'JetBrains Mono', monospace;
+font-family: 'Montserrat', sans-serif;
 color: var(--accent-color);
+letter-spacing: 1px;
 }
 .hero h1 {
-font-size: 3.5rem;
-font-weight: 700;
+font-family: 'Cormorant Garamond', serif;
+font-size: 4rem;
+font-weight: 400;
 margin-bottom: 20px;
-background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+color: var(--text-color);
 line-height: 1.1;
+letter-spacing: 3px;
+}
+.hero h1 span {
+color: var(--accent-color);
+font-style: italic;
 }
 .hero p {
-font-size: 1.2rem;
+font-size: 1.15rem;
 max-width: 650px;
-color: #94a3b8;
+color: var(--text-light);
 margin-bottom: 40px;
+font-weight: 300;
 }
 .hero-buttons {
 display: flex;
@@ -243,84 +221,73 @@ justify-content: center;
 }
 .btn-outline {
 background: transparent;
-border: 2px solid var(--accent-color);
+border: 1px solid var(--accent-color);
 color: var(--accent-color);
 padding: 12px 28px;
-border-radius: 5px;
-font-weight: 600;
+border-radius: 3px;
+font-weight: 500;
 transition: 0.3s;
-font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
 text-decoration: none;
 display: inline-block;
+letter-spacing: 0.5px;
 }
 .btn-outline:hover {
 background: var(--accent-color);
-color: var(--bg-color);
-box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+color: #fff;
+box-shadow: 0 10px 30px rgba(201, 168, 124, 0.3);
 }
-.code-window {
-background: #1e1e1e;
-border-radius: 10px;
-padding: 25px;
+.photo-frame {
+background: rgba(255, 255, 255, 0.9);
+border-radius: 5px;
+padding: 20px;
 margin: 50px 0;
-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-border: 1px solid #333;
-font-family: 'JetBrains Mono', monospace;
-font-size: 0.85rem;
+box-shadow: 0 20px 50px rgba(201, 168, 124, 0.2);
+border: 1px solid var(--border-color);
 max-width: 700px;
 width: 100%;
-text-align: left;
+text-align: center;
 }
-.window-header {
-display: flex;
-gap: 8px;
-margin-bottom: 15px;
+.frame-placeholder {
+background: linear-gradient(135deg, #F5EFE6 0%, #E8DDD4 100%);
+border-radius: 3px;
+padding: 60px 20px;
+color: var(--accent-color);
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.5rem;
+font-style: italic;
 }
-.window-dot {
-width: 12px;
-height: 12px;
-border-radius: 50%;
-}
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
-.code-content {
-color: #d4d4d4;
-}
-.code-keyword { color: #569cd6; }
-.code-string { color: #ce9178; }
-.code-function { color: #dcdcaa; }
-.code-comment { color: #6a9955; }
-.code-number { color: #b5cea8; }
 /* SECTIONS */
 .section {
 padding: 120px 0;
 }
 .section-title {
-font-size: 2.5rem;
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.8rem;
 margin-bottom: 60px;
 text-align: center;
 position: relative;
+font-weight: 400;
+letter-spacing: 2px;
 }
 .section-title::after {
-content: '//';
+content: '✦';
 display: block;
 color: var(--accent-color);
-font-family: 'JetBrains Mono', monospace;
-font-size: 1rem;
-margin-top: 10px;
+font-size: 1.2rem;
+margin-top: 15px;
 }
 /* PRICING */
 .pricing-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 gap: 30px;
 }
 .pricing-card {
 background: var(--card-bg);
-padding: 40px 30px;
-border-radius: 15px;
-border: 1px solid rgba(0, 212, 255, 0.1);
+padding: 35px 25px;
+border-radius: 8px;
+border: 1px solid var(--border-color);
 transition: 0.4s;
 backdrop-filter: blur(10px);
 position: relative;
@@ -329,6 +296,7 @@ overflow: hidden;
 .pricing-card.featured {
 border: 2px solid var(--accent-color);
 transform: scale(1.05);
+background: #fff;
 }
 .pricing-card.featured::before {
 content: 'Популярное';
@@ -336,11 +304,11 @@ position: absolute;
 top: 20px;
 right: -35px;
 background: var(--accent-color);
-color: var(--bg-color);
+color: #fff;
 padding: 5px 40px;
 transform: rotate(45deg);
 font-size: 0.8rem;
-font-weight: 600;
+font-weight: 500;
 }
 .pricing-card::before {
 content: '';
@@ -356,62 +324,62 @@ transition: 0.4s;
 .pricing-card:hover {
 transform: translateY(-10px);
 border-color: var(--accent-color);
-box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+box-shadow: 0 20px 40px rgba(201, 168, 124, 0.15);
 }
 .pricing-card:hover::before { transform: scaleX(1); }
 .pricing-card.featured:hover {
 transform: scale(1.05) translateY(-10px);
 }
 .pricing-header {
-margin-bottom: 25px;
+margin-bottom: 20px;
+text-align: center;
 }
 .pricing-name {
+font-family: 'Cormorant Garamond', serif;
 font-size: 1.5rem;
-color: #fff;
-margin-bottom: 10px;
+color: var(--text-color);
+margin-bottom: 8px;
+font-weight: 500;
 }
-.pricing-description {
-color: #94a3b8;
-font-size: 0.9rem;
-margin-bottom: 20px;
+.pricing-duration {
+color: var(--accent-color);
+font-size: 0.95rem;
+margin-bottom: 15px;
+font-weight: 500;
 }
 .pricing-price {
-font-size: 2.5rem;
+font-size: 2rem;
 color: var(--accent-color);
-font-weight: 700;
-margin-bottom: 25px;
-font-family: 'JetBrains Mono', monospace;
-}
-.pricing-price span {
-font-size: 1rem;
-color: #94a3b8;
-font-weight: 400;
+font-weight: 600;
+margin-bottom: 20px;
+font-family: 'Cormorant Garamond', serif;
 }
 .pricing-features {
 list-style: none;
-margin-bottom: 30px;
+margin-bottom: 25px;
 }
 .pricing-features li {
 padding: 10px 0;
-color: #e2e8f0;
-border-bottom: 1px solid rgba(255,255,255,0.05);
+color: var(--text-color);
+border-bottom: 1px solid var(--border-color);
 display: flex;
 align-items: start;
 gap: 10px;
+font-size: 0.9rem;
 }
 .pricing-features li::before {
-content: '✓';
-color: var(--success);
+content: '✦';
+color: var(--accent-color);
 font-weight: bold;
 }
 .pricing-note {
-background: rgba(0, 212, 255, 0.1);
-padding: 15px;
-border-radius: 8px;
+background: rgba(201, 168, 124, 0.1);
+padding: 12px;
+border-radius: 5px;
 border-left: 3px solid var(--accent-color);
-margin-top: 20px;
+margin-top: 15px;
 font-size: 0.85rem;
-color: #94a3b8;
+color: var(--text-light);
 }
 /* ADVANTAGES */
 .advantages-grid {
@@ -421,34 +389,39 @@ gap: 30px;
 }
 .advantage-card {
 background: var(--card-bg);
-padding: 30px;
-border-radius: 15px;
-border: 1px solid rgba(0, 212, 255, 0.1);
+padding: 35px 30px;
+border-radius: 8px;
+border: 1px solid var(--border-color);
 text-align: center;
 transition: 0.3s;
 }
 .advantage-card:hover {
 border-color: var(--accent-color);
 transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(201, 168, 124, 0.1);
 }
 .advantage-icon {
-font-size: 3rem;
+font-size: 2.5rem;
 margin-bottom: 20px;
 }
 .advantage-card h3 {
-color: #fff;
+font-family: 'Cormorant Garamond', serif;
+color: var(--text-color);
 margin-bottom: 15px;
+font-size: 1.4rem;
+font-weight: 500;
 }
 .advantage-card p {
-color: #94a3b8;
+color: var(--text-light);
 font-size: 0.95rem;
+font-weight: 300;
 }
 /* CONTACT FORM */
 .contact-section {
 background: var(--card-bg);
-border-radius: 20px;
+border-radius: 15px;
 padding: 60px;
-border: 1px solid rgba(0, 212, 255, 0.1);
+border: 1px solid var(--border-color);
 max-width: 900px;
 margin: 0 auto;
 }
@@ -458,13 +431,16 @@ grid-template-columns: 1fr 1fr;
 gap: 60px;
 }
 .contact-info h3 {
+font-family: 'Cormorant Garamond', serif;
 font-size: 1.8rem;
 margin-bottom: 20px;
-color: #fff;
+color: var(--text-color);
+font-weight: 500;
 }
 .contact-info > p {
-color: #94a3b8;
+color: var(--text-light);
 margin-bottom: 30px;
+font-weight: 300;
 }
 .contact-methods {
 margin-bottom: 30px;
@@ -475,9 +451,9 @@ align-items: center;
 gap: 15px;
 margin-bottom: 20px;
 padding: 15px;
-background: rgba(0, 212, 255, 0.05);
-border-radius: 10px;
-border: 1px solid rgba(0, 212, 255, 0.1);
+background: rgba(201, 168, 124, 0.08);
+border-radius: 8px;
+border: 1px solid var(--border-color);
 transition: 0.3s;
 }
 .contact-method:hover {
@@ -488,13 +464,15 @@ transform: translateX(5px);
 font-size: 1.5rem;
 }
 .contact-method-text h4 {
-color: #fff;
+color: var(--text-color);
 margin-bottom: 3px;
+font-size: 0.95rem;
 }
 .contact-method-text a, .contact-method-text span {
 color: var(--accent-color);
 text-decoration: none;
-font-family: 'JetBrains Mono', monospace;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.95rem;
 }
 .contact-form {
 display: flex;
@@ -507,19 +485,19 @@ flex-direction: column;
 gap: 8px;
 }
 .form-group label {
-color: #e2e8f0;
+color: var(--text-color);
 font-size: 0.9rem;
 font-weight: 500;
 }
 .form-group input,
 .form-group select,
 .form-group textarea {
-padding: 12px 15px;
-background: rgba(10, 14, 23, 0.6);
-border: 1px solid rgba(0, 212, 255, 0.2);
-border-radius: 8px;
-color: #fff;
-font-family: 'Inter', sans-serif;
+padding: 14px 15px;
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid var(--border-color);
+border-radius: 5px;
+color: var(--text-color);
+font-family: 'Montserrat', sans-serif;
 font-size: 1rem;
 transition: 0.3s;
 }
@@ -528,31 +506,32 @@ transition: 0.3s;
 .form-group textarea:focus {
 outline: none;
 border-color: var(--accent-color);
-box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+box-shadow: 0 0 0 3px rgba(201, 168, 124, 0.15);
 }
 .form-group textarea {
 resize: vertical;
 min-height: 120px;
 }
 .form-group select option {
-background: var(--bg-color);
-color: #fff;
+background: #fff;
+color: var(--text-color);
 }
 .submit-btn {
 background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-color: var(--bg-color);
+color: #fff;
 padding: 15px 30px;
 border: none;
-border-radius: 8px;
+border-radius: 5px;
 font-size: 1rem;
-font-weight: 600;
+font-weight: 500;
 cursor: pointer;
 transition: 0.3s;
 margin-top: 10px;
+letter-spacing: 0.5px;
 }
 .submit-btn:hover {
 transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+box-shadow: 0 10px 30px rgba(201, 168, 124, 0.3);
 }
 .submit-btn:disabled {
 opacity: 0.6;
@@ -566,7 +545,7 @@ margin-top: 15px;
 display: none;
 }
 .form-message.success {
-background: rgba(16, 185, 129, 0.1);
+background: rgba(124, 179, 66, 0.1);
 border: 1px solid var(--success);
 color: var(--success);
 display: block;
@@ -581,9 +560,9 @@ display: block;
 footer {
 text-align: center;
 padding: 40px 0;
-border-top: 1px solid rgba(0, 212, 255, 0.1);
+border-top: 1px solid var(--border-color);
 margin-top: 80px;
-color: #64748b;
+color: var(--text-light);
 font-size: 0.9rem;
 }
 footer a {
@@ -595,22 +574,23 @@ text-decoration: none;
 position: fixed;
 top: 0;
 left: 0;
-height: 3px;
+height: 2px;
 background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
 z-index: 1000;
 transition: width 0.1s;
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
-.hero h1 { font-size: 2.2rem; }
+.hero h1 { font-size: 2.5rem; }
 .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 .contact-section { padding: 40px 25px; }
 .pricing-card.featured { transform: none; }
 .pricing-card.featured:hover { transform: translateY(-10px); }
 nav { display: none; }
 .header-contacts { display: none; }
+.section-title { font-size: 2rem; }
 }
-/* --- ФИКСИРОВАННЫЙ КОНТЕЙНЕР ДЛЯ ПЕЧАТНОЙ МАШИНКИ --- */
+/* --- ТИПОГРАФИКА --- */
 .typing-container {
 display: inline-block;
 min-height: 1.2em;
@@ -621,6 +601,7 @@ line-height: 1.1;
 color: var(--accent-color);
 display: inline-block;
 min-width: 200px;
+font-style: italic;
 }
 .typing-cursor {
 color: var(--accent-color);
@@ -632,286 +613,297 @@ margin-left: 2px;
 0%, 100% { opacity: 1; }
 50% { opacity: 0; }
 }
-.typing-text.paused {
-/* Пустой класс для совместимости */
-}
 </style>
 </head>
 <body>
 <!-- Индикатор прокрутки -->
 <div class="scroll-progress" id="scrollProgress"></div>
-<!-- ПАРАЛЛАКС ФОН -->
-<div class="code-background" id="codeBackground">
-<div class="grid-overlay"></div>
-<div class="code-lines" id="codeLines"></div>
+<!-- ФОН С СЕМЕЙНЫМ ФОТО -->
+<div class="photo-background" id="photoBackground">
 </div>
 <div class="container">
 <!-- HEADER -->
 <header data-aos="fade-down" data-aos-duration="1000">
-<div class="logo">&lt;Maxim<span>Dev</span> /&gt;</div>
+<div class="logo">Katerina<span> Kinn</span></div>
 <nav>
 <ul>
 <li><a href="#services">Услуги</a></li>
-<li><a href="#pricing">Цены</a></li>
-<li><a href="#advantages">Преимущества</a></li>
+<li><a href="#pricing">Стоимость</a></li>
+<li><a href="#advantages">Обо мне</a></li>
 <li><a href="#contact">Контакты</a></li>
 </ul>
 </nav>
 <div class="header-contacts">
-<a href="tel:+79533736073" class="contact-link">📞 +7 (953) 373-60-73</a>
-<a href="https://t.me/maksim_alex" class="btn" target="_blank">Telegram</a>
+<a href="tel:+79312017822" class="contact-link">📞 +7 (931) 201-78-22</a>
+<a href="https://t.me/kinneva" class="btn" target="_blank">Telegram</a>
 </div>
 </header>
 <!-- HERO SECTION -->
 <section class="hero">
 <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
-💼 Открыт для новых проектов
+✦ Санкт-Петербург ✦
 </div>
 <h1 data-aos="fade-up" data-aos-delay="400">
-Разработка сайтов<br>
+Катерина Кинн<br>
 <span class="typing-container">
 <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
 </span>
 </h1>
 <p data-aos="fade-up" data-aos-delay="600">
-Создаю современные, быстрые и адаптивные сайты под ключ.
-От лендинга до сложного веб-приложения. Работаю качественно и в срок.
+Профессиональная фотосъёмка с душой и вниманием к деталям.
+Индивидуальный подход, тёплая атмосфера, живые эмоции в каждом кадре.
 </p>
 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
-<a href="#contact" class="btn">Обсудить проект</a>
-<a href="#pricing" class="btn-outline">Смотреть цены</a>
+<a href="#contact" class="btn">Записаться на съёмку</a>
+<a href="#pricing" class="btn-outline">Смотреть пакеты</a>
 </div>
-<!-- Code Window -->
-<div class="code-window" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1200">
-<div class="window-header">
-<div class="window-dot dot-red"></div>
-<div class="window-dot dot-yellow"></div>
-<div class="window-dot dot-green"></div>
-</div>
-<div class="code-content">
-<span class="code-keyword">const</span> <span class="code-function">project</span> = {<br>
-&nbsp;&nbsp;client: <span class="code-string">"Вы"</span>,<br>
-&nbsp;&nbsp;developer: <span class="code-string">"Максим"</span>,<br>
-&nbsp;&nbsp;quality: <span class="code-string">"premium"</span>,<br>
-&nbsp;&nbsp;deadline: <span class="code-string">"точно в срок"</span>,<br>
-&nbsp;&nbsp;support: <span class="code-keyword">true</span>,<br>
-&nbsp;&nbsp;<span class="code-function">start</span>: <span class="code-function">function</span>() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">"Свяжитесь со мной!"</span>;<br>
-&nbsp;&nbsp;}<br>
-};<br>
-<span class="code-comment">// Готов начать ваш проект</span>
+<!-- Photo Frame -->
+<div class="photo-frame" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1200">
+<div class="frame-placeholder">
+«Фотография — это искусство запечатлеть момент,<br>который останется в сердце навсегда»
 </div>
 </div>
 </section>
 <!-- PRICING -->
 <section id="pricing" class="section">
-<h2 class="section-title" data-aos="fade-up">Стоимость разработки</h2>
+<h2 class="section-title" data-aos="fade-up">Пакеты услуг</h2>
 <div class="pricing-grid">
-<!-- Сайт-визитка -->
+<!-- Love Story -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
 <div class="pricing-header">
-<h3 class="pricing-name">Сайт-визитка</h3>
-<p class="pricing-description">Простой одностраничный сайт для представления вас или вашей компании</p>
-<div class="pricing-price">7 000 ₽</div>
+<h3 class="pricing-name">Love Story</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>Одна страница с основной информацией</li>
-<li>Адаптивный дизайн (мобильная версия)</li>
-<li>Форма обратной связи</li>
-<li>Интеграция с соцсетями</li>
-<li>Размещение на хостинге</li>
-<li>Срок: 3-5 дней</li>
+<li>Романтическая фотосессия для пары</li>
+<li>1 локация в Санкт-Петербурге</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Помощь в позировании</li>
+<li>Готовность: 5-7 дней</li>
 </ul>
 <div class="pricing-note">
-💡 Идеально для: специалистов, небольших компаний, портфолио
+✦ Идеально для: влюблённых пар, годовщины, предложения руки и сердца
 </div>
 </div>
-<!-- Лендинг (популярный) -->
+<!-- Семейная -->
 <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
 <div class="pricing-header">
-<h3 class="pricing-name">Лендинг (одностраничный)</h3>
-<p class="pricing-description">Продающая страница для товара, услуги или мероприятия</p>
+<h3 class="pricing-name">Семейная съёмка</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Тёплые кадры для всей семьи</li>
+<li>До 5 человек в кадре</li>
+<li>1 локация</li>
+<li>25 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Работа с детьми</li>
+<li>Готовность: 7-10 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: семейных историй, дней рождения, беременности
+</div>
+</div>
+<!-- В ожидании чуда -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+<div class="pricing-header">
+<h3 class="pricing-name">В ожидании чуда</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Фотосессия для беременных</li>
+<li>Нежные и трогательные кадры</li>
+<li>1 локация</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Помощь в позировании</li>
+<li>Готовность: 5-7 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: будущих мам, желающих запечатлеть этот особенный период
+</div>
+</div>
+<!-- Праздники -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+<div class="pricing-header">
+<h3 class="pricing-name">Праздники / Мероприятия</h3>
+<div class="pricing-duration">от 1 часа</div>
+<div class="pricing-price">от 5 000 ₽/час</div>
+</div>
+<ul class="pricing-features">
+<li>Репортажная съёмка</li>
+<li>Живые эмоции и моменты</li>
+<li>Любая локация</li>
+<li>От 15 фото в час</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 7-10 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: дней рождений, корпоративов, выпускных
+</div>
+</div>
+<!-- Свадьба -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
+<div class="pricing-header">
+<h3 class="pricing-name">Свадьба</h3>
+<div class="pricing-duration">до 6 часов</div>
 <div class="pricing-price">10 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>Продающая структура (AIDA)</li>
-<li>Уникальный дизайн</li>
-<li>Адаптивная вёрстка</li>
-<li>Формы захвата (заявки)</li>
-<li>Интеграция с мессенджерами</li>
-<li>Базовая SEO-оптимизация</li>
-<li>Размещение и настройка</li>
-<li>Срок: 5-7 дней</li>
+<li>Полное сопровождение дня</li>
+<li>Репортаж и постановочные кадры</li>
+<li>До 200 фото в обработке</li>
+<li>Все исходники</li>
+<li>Выезд за пределы СПб</li>
+<li>Готовность: 14-21 день</li>
 </ul>
 <div class="pricing-note">
-💡 Идеально для: рекламы, акций, одного товара/услуги
+✦ Идеально для: камерных свадеб, выездных регистраций
 </div>
 </div>
-<!-- Корпоративный сайт -->
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-<div class="pricing-header">
-<h3 class="pricing-name">Корпоративный сайт</h3>
-<p class="pricing-description">Многостраничный сайт компании с возможностью редактирования</p>
-<div class="pricing-price">25 000 ₽</div>
-</div>
-<ul class="pricing-features">
-<li>До 10 страниц (Главная, Услуги, О нас, Контакты и др.)</li>
-<li><strong>CMS (админка)</strong> — вы сможете сами добавлять/менять контент</li>
-<li>Каталог услуг/товаров</li>
-<li>Блог/новости</li>
-<li>Формы обратной связи</li>
-<li>Адаптивный дизайн</li>
-<li>SEO-подготовка</li>
-<li>Обучение работе с сайтом</li>
-<li>Срок: 14-21 день</li>
-</ul>
-<div class="pricing-note">
-💡 Идеально для: компаний, которым нужно регулярно обновлять информацию
-</div>
-</div>
-<!-- Интернет-магазин -->
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
-<div class="pricing-header">
-<h3 class="pricing-name">Интернет-магазин</h3>
-<p class="pricing-description">Полноценный магазин с корзиной и онлайн-оплатой</p>
-<div class="pricing-price">50 000 ₽</div>
-</div>
-<ul class="pricing-features">
-<li>Каталог товаров (до 100 позиций)</li>
-<li><strong>Админка</strong> — управление товарами, ценами, заказами</li>
-<li>Корзина и оформление заказа</li>
-<li>Онлайн-оплата (эквайринг)</li>
-<li>Фильтры и поиск</li>
-<li>Личный кабинет покупателя</li>
-<li>Интеграция с доставкой</li>
-<li>Адаптивный дизайн</li>
-<li>Срок: 21-30 дней</li>
-</ul>
-<div class="pricing-note">
-💡 Идеально для: продаж товаров онлайн. CMS позволяет вам самостоятельно добавлять товары и управлять заказами
-</div>
-</div>
-<!-- Веб-приложение -->
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
-<div class="pricing-header">
-<h3 class="pricing-name">Веб-приложение / CRM</h3>
-<p class="pricing-description">Сложный проект с индивидуальной логикой и функционалом</p>
-<div class="pricing-price">от 80 000 ₽</div>
-</div>
-<ul class="pricing-features">
-<li>Индивидуальная разработка</li>
-<li>Личные кабинеты пользователей</li>
-<li>Сложная база данных</li>
-<li>API интеграции</li>
-<li>Панель администратора</li>
-<li>Современный стек (React/Vue + Node.js)</li>
-<li>Техническая поддержка</li>
-<li>Срок: от 30 дней</li>
-</ul>
-<div class="pricing-note">
-💡 Идеально для: сервисов, платформ, CRM-систем. Точная стоимость после обсуждения ТЗ
-</div>
-</div>
-<!-- Доработка -->
+<!-- ЗАГС + прогулка -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="600">
 <div class="pricing-header">
-<h3 class="pricing-name">Доработка / Поддержка</h3>
-<p class="pricing-description">Исправление ошибок, добавление функционала, поддержка</p>
-<div class="pricing-price">от 2 000 ₽/час</div>
+<h3 class="pricing-name">ЗАГС + прогулка</h3>
+<div class="pricing-duration">3-4 часа</div>
+<div class="pricing-price">15 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>Исправление багов</li>
-<li>Добавление нового функционала</li>
-<li>Оптимизация скорости</li>
-<li>Обновление дизайна</li>
-<li>Техническая поддержка</li>
-<li>Консультации</li>
+<li>Съёмка в ЗАГСе</li>
+<li>Прогулка по городу (1-2 локации)</li>
+<li>Романтические кадры</li>
+<li>От 150 фото в обработке</li>
+<li>Все исходники</li>
+<li>Помощь в позировании</li>
+<li>Готовность: 14-21 день</li>
 </ul>
 <div class="pricing-note">
-💡 Если у вас уже есть сайт, который нужно улучшить или исправить
+✦ Идеально для: пар, желающих запечатлеть день регистрации
+</div>
+</div>
+<!-- Выписка из роддома -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="700">
+<div class="pricing-header">
+<h3 class="pricing-name">Выписка из роддома</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Трогательные первые кадры</li>
+<li>Съёмка у роддома</li>
+<li>Эмоции встречи с малышом</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 5-7 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: семей, встречающих новорождённого
+</div>
+</div>
+<!-- День рождения / Вечеринка -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="800">
+<div class="pricing-header">
+<h3 class="pricing-name">День рождения / Вечеринка</h3>
+<div class="pricing-duration">от 1 часа</div>
+<div class="pricing-price">от 5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Репортажная съёмка праздника</li>
+<li>Живые эмоции гостей</li>
+<li>Любая локация</li>
+<li>От 20 фото в час</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 7-10 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: детских и взрослых праздников, вечеринок
 </div>
 </div>
 </div>
 </section>
 <!-- ADVANTAGES -->
 <section id="advantages" class="section">
-<h2 class="section-title" data-aos="fade-up">Почему стоит работать со мной</h2>
+<h2 class="section-title" data-aos="fade-up">Почему выбирают меня</h2>
 <div class="advantages-grid">
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
-<div class="advantage-icon">⚡</div>
-<h3>Быстрая разработка</h3>
-<p>Соблюдаю дедлайны. Ваш сайт будет готов точно в оговоренный срок без задержек</p>
+<div class="advantage-icon">📸</div>
+<h3>Профессиональное оборудование</h3>
+<p>Работаю на технику Canon Sony, использую профессиональную оптику и свет</p>
 </div>
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
-<div class="advantage-icon">📱</div>
-<h3>Адаптивный дизайн</h3>
-<p>Сайт будет идеально выглядеть на всех устройствах: телефоны, планшеты, компьютеры</p>
+<div class="advantage-icon">🎨</div>
+<h3>Авторская обработка</h3>
+<p>Каждое фото проходит тщательную ретушь в моём уникальном стиле</p>
 </div>
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
-<div class="advantage-icon">💻</div>
-<h3>Удобное управление</h3>
-<p>Для многостраничных сайтов и магазинов предоставляю CMS — вы сможете сами менять контент без программиста</p>
+<div class="advantage-icon">💕</div>
+<h3>Тёплая атмосфера</h3>
+<p>Помогу расслабиться перед камерой, даже если вы снимаетесь впервые</p>
 </div>
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
-<div class="advantage-icon">🚀</div>
-<h3>Современные технологии</h3>
-<p>Использую актуальный стек: HTML5, CSS3, JavaScript, React. Быстрая загрузка и безопасность</p>
+<div class="advantage-icon">🏛️</div>
+<h3>Знаю лучшие локации</h3>
+<p>Порекомендую идеальные места для съёмки в Санкт-Петербурге и области</p>
 </div>
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="500">
-<div class="advantage-icon">💬</div>
-<h3>Постоянная связь</h3>
-<p>Всегда на связи в Telegram и по телефону. Оперативно отвечаю на вопросы</p>
+<div class="advantage-icon">⏱️</div>
+<h3>Соблюдение сроков</h3>
+<p>Готовые фото вы получите точно в оговоренное время без задержек</p>
 </div>
 <div class="advantage-card" data-aos="fade-up" data-aos-delay="600">
-<div class="advantage-icon">🎯</div>
+<div class="advantage-icon">✨</div>
 <h3>Индивидуальный подход</h3>
-<p>Не использую шаблоны. Каждый проект разрабатываю с учётом ваших задач и пожеланий</p>
+<p>Учитываю все ваши пожелания и помогаю создать идеальный образ</p>
 </div>
 </div>
 </section>
 <!-- CONTACT -->
 <section id="contact" class="section">
-<h2 class="section-title" data-aos="fade-up">Обсудить проект</h2>
+<h2 class="section-title" data-aos="fade-up">Записаться на съёмку</h2>
 <div class="contact-section" data-aos="zoom-in" data-aos-duration="1200">
 <div class="contact-grid">
 <div class="contact-info">
-<h3>Давайте создадим что-то крутое вместе!</h3>
-<p>Заполните форму, и я свяжусь с вами в течение часа для обсуждения деталей проекта</p>
+<h3>Давайте создадим красивые кадры вместе!</h3>
+<p>Заполните форму, и я свяжусь с вами в течение часа для обсуждения деталей съёмки</p>
 <div class="contact-methods">
 <div class="contact-method">
 <div class="contact-method-icon">📞</div>
 <div class="contact-method-text">
 <h4>Телефон</h4>
-<a href="tel:+79533736073">+7 (953) 373-60-73</a>
-</div>
-</div>
-<div class="contact-method">
-<div class="contact-method-icon">✉️</div>
-<div class="contact-method-text">
-<h4>Email</h4>
-<a href="mailto:ma89spb@gmail.com">ma89spb@gmail.com</a>
+<a href="tel:+79312017822">+7 (931) 201-78-22</a>
 </div>
 </div>
 <div class="contact-method">
 <div class="contact-method-icon">✈️</div>
 <div class="contact-method-text">
 <h4>Telegram</h4>
-<a href="https://t.me/maksim_alex" target="_blank">@maksim_alex</a>
+<a href="https://t.me/kinneva" target="_blank">@kinneva</a>
+</div>
+</div>
+<div class="contact-method">
+<div class="contact-method-icon">📍</div>
+<div class="contact-method-text">
+<h4>Город</h4>
+<span>Санкт-Петербург</span>
 </div>
 </div>
 </div>
-<div style="background: rgba(0, 212, 255, 0.05); padding: 20px; border-radius: 10px; border-left: 3px solid var(--accent-color);">
-<strong style="color: var(--accent-color); display: block; margin-bottom: 10px;">🚀 Бесплатная консультация</strong>
-<p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">
-Помогу выбрать оптимальный тип сайта под ваши задачи и бюджет.
-Отвечу на все вопросы по разработке.
+<div style="background: rgba(201, 168, 124, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-color);">
+<strong style="color: var(--accent-color); display: block; margin-bottom: 10px;">✦ Бесплатная консультация</strong>
+<p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">
+Помогу выбрать идеальный пакет под ваши задачи и бюджет.
+Отвечу на все вопросы по организации съёмки.
 </p>
 </div>
 </div>
 <form class="contact-form" id="contactForm">
 <div class="form-group">
 <label for="name">Ваше имя *</label>
-<input type="text" id="name" name="name" required placeholder="Иван Иванов">
+<input type="text" id="name" name="name" required placeholder="Как к вам обращаться">
 </div>
 <div class="form-group">
 <label for="phone">Телефон *</label>
@@ -922,21 +914,23 @@ margin-left: 2px;
 <input type="email" id="email" name="email" placeholder="example@mail.ru">
 </div>
 <div class="form-group">
-<label for="siteType">Тип сайта *</label>
-<select id="siteType" name="siteType" required>
-<option value="">Выберите тип сайта</option>
-<option value="Сайт-визитка (7 000 ₽)">Сайт-визитка — 7 000 ₽</option>
-<option value="Лендинг (10 000 ₽)">Лендинг (одностраничный) — 10 000 ₽</option>
-<option value="Корпоративный сайт (25 000 ₽)">Корпоративный сайт — 25 000 ₽</option>
-<option value="Интернет-магазин (50 000 ₽)">Интернет-магазин — 50 000 ₽</option>
-<option value="Веб-приложение (от 80 000 ₽)">Веб-приложение / CRM — от 80 000 ₽</option>
-<option value="Доработка существующего сайта">Доработка существующего сайта</option>
+<label for="serviceType">Тип съёмки *</label>
+<select id="serviceType" name="serviceType" required>
+<option value="">Выберите тип съёмки</option>
+<option value="Love Story (5 000 ₽)">Love Story — 5 000 ₽</option>
+<option value="Семейная съёмка (5 000 ₽)">Семейная съёмка — 5 000 ₽</option>
+<option value="В ожидании чуда (5 000 ₽)">В ожидании чуда — 5 000 ₽</option>
+<option value="Праздники/Мероприятия (от 5 000 ₽/час)">Праздники/Мероприятия — от 5 000 ₽/час</option>
+<option value="Свадьба (10 000 ₽)">Свадьба — 10 000 ₽</option>
+<option value="ЗАГС + прогулка (15 000 ₽)">ЗАГС + прогулка — 15 000 ₽</option>
+<option value="Выписка из роддома (5 000 ₽)">Выписка из роддома — 5 000 ₽</option>
+<option value="День рождения/Вечеринка (от 5 000 ₽)">День рождения/Вечеринка — от 5 000 ₽</option>
 <option value="Пока не определился">Пока не определился, нужна консультация</option>
 </select>
 </div>
 <div class="form-group">
-<label for="message">Описание задачи *</label>
-<textarea id="message" name="message" required placeholder="Расскажите кратко о вашем проекте: для чего нужен сайт, какие функции должны быть, есть ли пожелания по дизайну..."></textarea>
+<label for="message">Пожелания к съёмке *</label>
+<textarea id="message" name="message" required placeholder="Расскажите о вашей идее: желаемая дата, локация, особые пожелания, количество человек..."></textarea>
 </div>
 <button type="submit" class="submit-btn" id="submitBtn">
 Отправить заявку
@@ -948,14 +942,14 @@ margin-left: 2px;
 </section>
 <!-- FOOTER -->
 <footer>
-<p>© 2024 Максим. Разработка сайтов под ключ.</p>
-<p style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">
-&lt;/&gt; Сделано с <span style="color: var(--accent-color);">💙</span> и кофе
+<p>© 2024 Катерина Кинн. Профессиональный фотограф Санкт-Петербург.</p>
+<p style="margin-top: 10px; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-style: italic;">
+✦ Снято с <span style="color: var(--accent-color);">любовью</span> и вдохновением ✦
 </p>
 <p style="margin-top: 15px; font-size: 0.85rem;">
-<a href="https://github.com" target="_blank">GitHub</a> •
-<a href="https://vercel.com" target="_blank">Vercel</a> •
-<a href="https://t.me/maksim_alex" target="_blank">Telegram</a>
+<a href="https://t.me/kinneva" target="_blank">Telegram</a> •
+<a href="https://instagram.com" target="_blank">Instagram</a> •
+<a href="https://vk.com" target="_blank">VK</a>
 </p>
 </footer>
 </div>
@@ -969,56 +963,37 @@ easing: 'ease-out-cubic',
 once: false,
 offset: 100
 });
-// --- ГЕНЕРАЦИЯ ФОНА С КОДОМ ---
-const codeLines = document.getElementById('codeLines');
-const codeBackground = document.getElementById('codeBackground');
-const codeWords = ['function', 'const', 'let', 'var', 'return', 'if', 'else', 'for', 'while', 'class', 'import', 'export', 'async', 'await', '=>', '{}', '[]', '()', '</>', 'div', 'span', 'class', 'id', 'href', 'src', 'alt', 'true', 'false', 'null', 'undefined', 'document', 'window', 'console', 'log', 'error', 'React', 'Vue', 'Node', 'API', 'JSON', 'HTML', 'CSS'];
-function generateCodeLines() {
-let lines = '';
-for (let i = 0; i < 100; i++) {
-let line = '';
-const indent = '    '.repeat(Math.floor(Math.random() * 3));
-for (let j = 0; j < 25; j++) {
-const randomWord = codeWords[Math.floor(Math.random() * codeWords.length)];
-line += randomWord + ' ';
-}
-lines += indent + '// ' + line.trim() + '\n';
-}
-codeLines.textContent = lines;
-}
-generateCodeLines();
 // --- ПАРАЛЛАКС ЭФФЕКТ ---
 let scrollPosition = 0;
 let targetPosition = 0;
-const parallaxSpeed = 0.3;
 window.addEventListener('scroll', () => {
 targetPosition = window.scrollY;
 });
 function animateParallax() {
 scrollPosition += (targetPosition - scrollPosition) * 0.05;
-codeLines.style.transform = `translateY(${scrollPosition * parallaxSpeed}px)`;
 const progress = (scrollPosition / (document.body.scrollHeight - window.innerHeight)) * 100;
 document.getElementById('scrollProgress').style.width = progress + '%';
 requestAnimationFrame(animateParallax);
 }
 animateParallax();
 // --- ПЛАВАЮЩИЕ ЭЛЕМЕНТЫ ---
-function createFloatingCode() {
-const floatingCode = document.createElement('div');
-floatingCode.className = 'floating-code';
-floatingCode.textContent = codeWords[Math.floor(Math.random() * codeWords.length)];
-floatingCode.style.left = Math.random() * 100 + '%';
-floatingCode.style.animationDuration = (15 + Math.random() * 20) + 's';
-floatingCode.style.fontSize = (10 + Math.random() * 15) + 'px';
-codeBackground.appendChild(floatingCode);
+const floatingElements = ['✦', '📷', '', '✨', ''];
+function createFloatingElement() {
+const floatingEl = document.createElement('div');
+floatingEl.className = 'floating-element';
+floatingEl.textContent = floatingElements[Math.floor(Math.random() * floatingElements.length)];
+floatingEl.style.left = Math.random() * 100 + '%';
+floatingEl.style.animationDuration = (20 + Math.random() * 25) + 's';
+floatingEl.style.fontSize = (15 + Math.random() * 20) + 'px';
+document.getElementById('photoBackground').appendChild(floatingEl);
 setTimeout(() => {
-floatingCode.remove();
-}, 35000);
+floatingEl.remove();
+}, 45000);
 }
-setInterval(createFloatingCode, 2000);
-// --- ЭФФЕКТ ПЕЧАТНОЙ МАШИНКИ (без прыжков контента) ---
+setInterval(createFloatingElement, 3000);
+// --- ЭФФЕКТ ПЕЧАТНОЙ МАШИНКИ ---
 const typingText = document.getElementById('typingText');
-const phrases = ['под ключ', 'для бизнеса', 'быстро и качественно', 'современных технологий'];
+const phrases = ['фотограф', 'Санкт-Петербург', 'живые эмоции', 'ваша история'];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -1090,7 +1065,7 @@ const formData = {
 name: document.getElementById('name').value,
 phone: document.getElementById('phone').value,
 email: document.getElementById('email').value,
-siteType: document.getElementById('siteType').value,
+serviceType: document.getElementById('serviceType').value,
 message: document.getElementById('message').value,
 timestamp: new Date().toLocaleString('ru-RU')
 };
@@ -1104,7 +1079,7 @@ body: JSON.stringify(formData)
 });
 const result = await response.json();
 if (response.ok) {
-formMessage.textContent = '✅ Заявка отправлена! Я свяжусь с вами в ближайшее время.';
+formMessage.textContent = '✦ Заявка отправлена! Я свяжусь с вами в ближайшее время.';
 formMessage.className = 'form-message success';
 contactForm.reset();
 } else {
