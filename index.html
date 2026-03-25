@@ -63,7 +63,7 @@ height: 100vh;
 z-index: -1;
 overflow: hidden;
 /* Семейное фото с наложением бежевого градиента */
-background: linear-gradient(135deg, rgba(253, 248, 243, 0.85) 0%, rgba(245, 239, 230, 0.9) 100%),
+background: linear-gradient(135deg, rgba(253, 248, 243, 0.88) 0%, rgba(245, 239, 230, 0.92) 100%),
 url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&q=80') center/cover no-repeat;
 }
 .grid-overlay {
@@ -300,12 +300,12 @@ margin-top: 15px;
 /* PRICING */
 .pricing-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 gap: 30px;
 }
 .pricing-card {
 background: var(--card-bg);
-padding: 40px 30px;
+padding: 35px 25px;
 border-radius: 8px;
 border: 1px solid var(--border-color);
 transition: 0.4s;
@@ -351,47 +351,41 @@ box-shadow: 0 20px 40px rgba(201, 168, 124, 0.15);
 transform: scale(1.05) translateY(-10px);
 }
 .pricing-header {
-margin-bottom: 25px;
+margin-bottom: 20px;
 text-align: center;
 }
 .pricing-name {
 font-family: 'Cormorant Garamond', serif;
-font-size: 1.6rem;
+font-size: 1.5rem;
 color: var(--text-color);
-margin-bottom: 10px;
+margin-bottom: 8px;
 font-weight: 500;
 }
-.pricing-description {
-color: var(--text-light);
-font-size: 0.9rem;
-margin-bottom: 20px;
-font-weight: 300;
+.pricing-duration {
+color: var(--accent-color);
+font-size: 0.95rem;
+margin-bottom: 15px;
+font-weight: 500;
 }
 .pricing-price {
-font-size: 2.2rem;
+font-size: 2rem;
 color: var(--accent-color);
-font-weight: 500;
-margin-bottom: 25px;
+font-weight: 600;
+margin-bottom: 20px;
 font-family: 'Cormorant Garamond', serif;
-}
-.pricing-price span {
-font-size: 1rem;
-color: var(--text-light);
-font-weight: 300;
-font-family: 'Montserrat', sans-serif;
 }
 .pricing-features {
 list-style: none;
-margin-bottom: 30px;
+margin-bottom: 25px;
 }
 .pricing-features li {
-padding: 12px 0;
+padding: 10px 0;
 color: var(--text-color);
 border-bottom: 1px solid var(--border-color);
 display: flex;
 align-items: start;
 gap: 10px;
-font-size: 0.95rem;
+font-size: 0.9rem;
 }
 .pricing-features li::before {
 content: '✦';
@@ -400,10 +394,10 @@ font-weight: bold;
 }
 .pricing-note {
 background: rgba(201, 168, 124, 0.1);
-padding: 15px;
+padding: 12px;
 border-radius: 5px;
 border-left: 3px solid var(--accent-color);
-margin-top: 20px;
+margin-top: 15px;
 font-size: 0.85rem;
 color: var(--text-light);
 }
@@ -695,127 +689,159 @@ margin-left: 2px;
 <section id="pricing" class="section">
 <h2 class="section-title" data-aos="fade-up">Пакеты услуг</h2>
 <div class="pricing-grid">
-<!-- Экспресс -->
+<!-- Love Story -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
 <div class="pricing-header">
-<h3 class="pricing-name">Экспресс-съёмка</h3>
-<p class="pricing-description">Короткая фотосессия для соцсетей и портфолио</p>
+<h3 class="pricing-name">Love Story</h3>
+<div class="pricing-duration">1 час</div>
 <div class="pricing-price">5 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>30 минут съёмки</li>
+<li>Романтическая фотосессия для пары</li>
 <li>1 локация в Санкт-Петербурге</li>
-<li>15 фото в авторской обработке</li>
+<li>20 фото в авторской обработке</li>
 <li>Все исходники в цветокоррекции</li>
-<li>Готовность: 3-5 дней</li>
 <li>Помощь в позировании</li>
-</ul>
-<div class="pricing-note">
-✦ Идеально для: контента в соцсети, обновления аватара, быстрого портрета
-</div>
-</div>
-<!-- Индивидуальная (популярный) -->
-<div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-<div class="pricing-header">
-<h3 class="pricing-name">Индивидуальная съёмка</h3>
-<p class="pricing-description">Полноценная фотосессия для создания портфолио</p>
-<div class="pricing-price">10 000 ₽</div>
-</div>
-<ul class="pricing-features">
-<li>1.5 часа съёмки</li>
-<li>1-2 локации на выбор</li>
-<li>40 фото в авторской обработке</li>
-<li>Все исходники в цветокоррекции</li>
-<li>Помощь в подборе образа</li>
-<li>Рекомендации по позированию</li>
-<li>Готовность: 7-10 дней</li>
-<li>Онлайн-галерея для просмотра</li>
-</ul>
-<div class="pricing-note">
-✦ Идеально для: личного бренда, портфолио, подарка себе или близким
-</div>
-</div>
-<!-- Love Story -->
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-<div class="pricing-header">
-<h3 class="pricing-name">Love Story</h3>
-<p class="pricing-description">Романтическая фотосессия для пары</p>
-<div class="pricing-price">12 000 ₽</div>
-</div>
-<ul class="pricing-features">
-<li>2 часа съёмки</li>
-<li>2 локации в Санкт-Петербурге</li>
-<li>50 фото в авторской обработке</li>
-<li>Все исходники в цветокоррекции</li>
-<li>Помощь в создании образа</li>
-<li>Романтическая атмосфера</li>
-<li>Готовность: 10-14 дней</li>
-<li>Онлайн-галерея</li>
+<li>Готовность: 5-7 дней</li>
 </ul>
 <div class="pricing-note">
 ✦ Идеально для: влюблённых пар, годовщины, предложения руки и сердца
 </div>
 </div>
 <!-- Семейная -->
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+<div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
 <div class="pricing-header">
 <h3 class="pricing-name">Семейная съёмка</h3>
-<p class="pricing-description">Тёплые кадры для всей семьи</p>
-<div class="pricing-price">15 000 ₽</div>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>2 часа съёмки</li>
+<li>Тёплые кадры для всей семьи</li>
 <li>До 5 человек в кадре</li>
-<li>1-2 локации</li>
-<li>60 фото в авторской обработке</li>
+<li>1 локация</li>
+<li>25 фото в авторской обработке</li>
 <li>Все исходники в цветокоррекции</li>
 <li>Работа с детьми</li>
-<li>Готовность: 10-14 дней</li>
-<li>Онлайн-галерея</li>
+<li>Готовность: 7-10 дней</li>
 </ul>
 <div class="pricing-note">
 ✦ Идеально для: семейных историй, дней рождения, беременности
 </div>
 </div>
-<!-- Свадебная -->
+<!-- В ожидании чуда -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+<div class="pricing-header">
+<h3 class="pricing-name">В ожидании чуда</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Фотосессия для беременных</li>
+<li>Нежные и трогательные кадры</li>
+<li>1 локация</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Помощь в позировании</li>
+<li>Готовность: 5-7 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: будущих мам, желающих запечатлеть этот особенный период
+</div>
+</div>
+<!-- Праздники -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+<div class="pricing-header">
+<h3 class="pricing-name">Праздники / Мероприятия</h3>
+<div class="pricing-duration">от 1 часа</div>
+<div class="pricing-price">от 5 000 ₽/час</div>
+</div>
+<ul class="pricing-features">
+<li>Репортажная съёмка</li>
+<li>Живые эмоции и моменты</li>
+<li>Любая локация</li>
+<li>От 15 фото в час</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 7-10 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: дней рождений, корпоративов, выпускных
+</div>
+</div>
+<!-- Свадьба -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
 <div class="pricing-header">
-<h3 class="pricing-name">Свадебная съёмка</h3>
-<p class="pricing-description">Полное сопровождение вашего важного дня</p>
-<div class="pricing-price">от 35 000 ₽</div>
+<h3 class="pricing-name">Свадьба</h3>
+<div class="pricing-duration">до 6 часов</div>
+<div class="pricing-price">10 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>Полный съёмочный день (до 10 часов)</li>
-<li>Два фотографа по запросу</li>
-<li>От 300 фото в обработке</li>
+<li>Полное сопровождение дня</li>
+<li>Репортаж и постановочные кадры</li>
+<li>До 200 фото в обработке</li>
 <li>Все исходники</li>
 <li>Выезд за пределы СПб</li>
-<li>Фотокнига в подарок</li>
-<li>Готовность: 30-45 дней</li>
-<li>Индивидуальный альбом</li>
+<li>Готовность: 14-21 день</li>
 </ul>
 <div class="pricing-note">
-✦ Идеально для: свадеб, выездных регистраций, камерных торжеств
+✦ Идеально для: камерных свадеб, выездных регистраций
 </div>
 </div>
-<!-- Контент -->
+<!-- ЗАГС + прогулка -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="600">
 <div class="pricing-header">
-<h3 class="pricing-name">Контент-съёмка</h3>
-<p class="pricing-description">Фото для бизнеса и социальных сетей</p>
-<div class="pricing-price">от 8 000 ₽/час</div>
+<h3 class="pricing-name">ЗАГС + прогулка</h3>
+<div class="pricing-duration">3-4 часа</div>
+<div class="pricing-price">15 000 ₽</div>
 </div>
 <ul class="pricing-features">
-<li>От 1 часа съёмки</li>
-<li>Предметная и репортажная съёмка</li>
-<li>Фото для Instagram, сайта</li>
-<li>Обработка под брендбук</li>
-<li>Помощь с концепцией</li>
-<li>Срочная отдача (от 2 дней)</li>
-<li>Возможность видео</li>
+<li>Съёмка в ЗАГСе</li>
+<li>Прогулка по городу (1-2 локации)</li>
+<li>Романтические кадры</li>
+<li>От 150 фото в обработке</li>
+<li>Все исходники</li>
+<li>Помощь в позировании</li>
+<li>Готовность: 14-21 день</li>
 </ul>
 <div class="pricing-note">
-✦ Идеально для: брендов, экспертов, магазинов, ресторанов
+✦ Идеально для: пар, желающих запечатлеть день регистрации
+</div>
+</div>
+<!-- Выписка из роддома -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="700">
+<div class="pricing-header">
+<h3 class="pricing-name">Выписка из роддома</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Трогательные первые кадры</li>
+<li>Съёмка у роддома</li>
+<li>Эмоции встречи с малышом</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 5-7 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: семей, встречающих новорождённого
+</div>
+</div>
+<!-- День рождения / Вечеринка -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="800">
+<div class="pricing-header">
+<h3 class="pricing-name">День рождения / Вечеринка</h3>
+<div class="pricing-duration">от 1 часа</div>
+<div class="pricing-price">от 5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Репортажная съёмка праздника</li>
+<li>Живые эмоции гостей</li>
+<li>Любая локация</li>
+<li>От 20 фото в час</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Готовность: 7-10 дней</li>
+</ul>
+<div class="pricing-note">
+✦ Идеально для: детских и взрослых праздников, вечеринок
 </div>
 </div>
 </div>
@@ -912,12 +938,14 @@ margin-left: 2px;
 <label for="serviceType">Тип съёмки *</label>
 <select id="serviceType" name="serviceType" required>
 <option value="">Выберите тип съёмки</option>
-<option value="Экспресс-съёмка (5 000 ₽)">Экспресс-съёмка — 5 000 ₽</option>
-<option value="Индивидуальная съёмка (10 000 ₽)">Индивидуальная съёмка — 10 000 ₽</option>
-<option value="Love Story (12 000 ₽)">Love Story — 12 000 ₽</option>
-<option value="Семейная съёмка (15 000 ₽)">Семейная съёмка — 15 000 ₽</option>
-<option value="Свадебная съёмка (от 35 000 ₽)">Свадебная съёмка — от 35 000 ₽</option>
-<option value="Контент-съёмка (от 8 000 ₽/час)">Контент-съёмка — от 8 000 ₽/час</option>
+<option value="Love Story (5 000 ₽)">Love Story — 5 000 ₽</option>
+<option value="Семейная съёмка (5 000 ₽)">Семейная съёмка — 5 000 ₽</option>
+<option value="В ожидании чуда (5 000 ₽)">В ожидании чуда — 5 000 ₽</option>
+<option value="Праздники/Мероприятия (от 5 000 ₽/час)">Праздники/Мероприятия — от 5 000 ₽/час</option>
+<option value="Свадьба (10 000 ₽)">Свадьба — 10 000 ₽</option>
+<option value="ЗАГС + прогулка (15 000 ₽)">ЗАГС + прогулка — 15 000 ₽</option>
+<option value="Выписка из роддома (5 000 ₽)">Выписка из роддома — 5 000 ₽</option>
+<option value="День рождения/Вечеринка (от 5 000 ₽)">День рождения/Вечеринка — от 5 000 ₽</option>
 <option value="Пока не определился">Пока не определился, нужна консультация</option>
 </select>
 </div>
