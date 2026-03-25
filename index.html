@@ -264,12 +264,12 @@ margin-top: 15px;
 }
 .pricing-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-gap: 30px;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
 }
 .pricing-card {
 background: var(--card-bg);
-padding: 40px 30px;
+padding: 30px 25px;
 border-radius: 8px;
 border: 1px solid var(--border-color);
 transition: 0.4s;
@@ -279,19 +279,19 @@ overflow: hidden;
 }
 .pricing-card.featured {
 border: 2px solid var(--accent-color);
-transform: scale(1.05);
+transform: scale(1.03);
 background: #fff;
 }
 .pricing-card.featured::before {
 content: 'Популярное';
 position: absolute;
-top: 20px;
-right: -35px;
+top: 15px;
+right: -30px;
 background: var(--accent-color);
 color: #fff;
-padding: 5px 40px;
+padding: 4px 35px;
 transform: rotate(45deg);
-font-size: 0.8rem;
+font-size: 0.75rem;
 font-weight: 500;
 }
 .pricing-card::before {
@@ -306,67 +306,61 @@ transform: scaleX(0);
 transition: 0.4s;
 }
 .pricing-card:hover {
-transform: translateY(-10px);
+transform: translateY(-8px);
 border-color: var(--accent-color);
-box-shadow: 0 20px 40px rgba(201, 168, 124, 0.15);
+box-shadow: 0 15px 35px rgba(201, 168, 124, 0.15);
 }
 .pricing-card:hover::before { transform: scaleX(1); }
-.pricing-card.featured:hover { transform: scale(1.05) translateY(-10px); }
-.pricing-header { margin-bottom: 25px; text-align: center; }
+.pricing-card.featured:hover { transform: scale(1.03) translateY(-8px); }
+.pricing-header { margin-bottom: 20px; text-align: center; }
 .pricing-name {
 font-family: 'Cormorant Garamond', serif;
-font-size: 1.6rem;
+font-size: 1.4rem;
 color: var(--text-color);
-margin-bottom: 10px;
+margin-bottom: 8px;
 font-weight: 500;
 }
-.pricing-description {
-color: var(--text-light);
+.pricing-duration {
+color: var(--accent-color);
 font-size: 0.9rem;
-margin-bottom: 20px;
-font-weight: 300;
+margin-bottom: 12px;
+font-weight: 500;
 }
 .pricing-price {
-font-size: 2.2rem;
+font-size: 1.8rem;
 color: var(--accent-color);
-font-weight: 500;
-margin-bottom: 25px;
+font-weight: 600;
+margin-bottom: 18px;
 font-family: 'Cormorant Garamond', serif;
 }
-.pricing-price span {
-font-size: 1rem;
-color: var(--text-light);
-font-weight: 300;
-font-family: 'Montserrat', sans-serif;
-}
-.pricing-features { list-style: none; margin-bottom: 30px; }
+.pricing-features { list-style: none; margin-bottom: 25px; }
 .pricing-features li {
-padding: 12px 0;
+padding: 8px 0;
 color: var(--text-color);
 border-bottom: 1px solid var(--border-color);
 display: flex;
 align-items: start;
-gap: 10px;
-font-size: 0.95rem;
+gap: 8px;
+font-size: 0.9rem;
 }
 .pricing-features li::before { content: '✦'; color: var(--accent-color); font-weight: bold; }
 .pricing-note {
 background: rgba(201, 168, 124, 0.1);
-padding: 15px;
+padding: 12px;
 border-radius: 5px;
 border-left: 3px solid var(--accent-color);
-margin-top: 20px;
-font-size: 0.85rem;
+margin-top: 15px;
+font-size: 0.8rem;
 color: var(--text-light);
 }
 .advantages-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
 }
 .advantage-card {
 background: var(--card-bg);
-padding: 35px 30px;
+padding: 30px 25px;
 border-radius: 8px;
 border: 1px solid var(--border-color);
 text-align: center;
@@ -375,41 +369,41 @@ transition: 0.3s;
 .advantage-card:hover {
 border-color: var(--accent-color);
 transform: translateY(-5px);
-box-shadow: 0 15px 35px rgba(201, 168, 124, 0.1);
+box-shadow: 0 12px 30px rgba(201, 168, 124, 0.1);
 }
-.advantage-icon { font-size: 2.5rem; margin-bottom: 20px; }
+.advantage-icon { font-size: 2.2rem; margin-bottom: 15px; }
 .advantage-card h3 {
 font-family: 'Cormorant Garamond', serif;
 color: var(--text-color);
-margin-bottom: 15px;
-font-size: 1.4rem;
+margin-bottom: 12px;
+font-size: 1.3rem;
 font-weight: 500;
 }
-.advantage-card p { color: var(--text-light); font-size: 0.95rem; font-weight: 300; }
+.advantage-card p { color: var(--text-light); font-size: 0.9rem; font-weight: 300; }
 .contact-section {
 background: var(--card-bg);
 border-radius: 15px;
-padding: 60px;
+padding: 50px 40px;
 border: 1px solid var(--border-color);
 max-width: 900px;
 margin: 0 auto;
 }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 .contact-info h3 {
 font-family: 'Cormorant Garamond', serif;
-font-size: 1.8rem;
-margin-bottom: 20px;
+font-size: 1.6rem;
+margin-bottom: 18px;
 color: var(--text-color);
 font-weight: 500;
 }
-.contact-info > p { color: var(--text-light); margin-bottom: 30px; font-weight: 300; }
-.contact-methods { margin-bottom: 30px; }
+.contact-info > p { color: var(--text-light); margin-bottom: 25px; font-weight: 300; }
+.contact-methods { margin-bottom: 25px; }
 .contact-method {
 display: flex;
 align-items: center;
-gap: 15px;
-margin-bottom: 20px;
-padding: 15px;
+gap: 12px;
+margin-bottom: 18px;
+padding: 12px;
 background: rgba(201, 168, 124, 0.08);
 border-radius: 8px;
 border: 1px solid var(--border-color);
@@ -419,25 +413,25 @@ transition: 0.3s;
 border-color: var(--accent-color);
 transform: translateX(5px);
 }
-.contact-method-icon { font-size: 1.5rem; }
-.contact-method-text h4 { color: var(--text-color); margin-bottom: 3px; font-size: 0.95rem; }
+.contact-method-icon { font-size: 1.3rem; }
+.contact-method-text h4 { color: var(--text-color); margin-bottom: 2px; font-size: 0.9rem; }
 .contact-method-text a, .contact-method-text span {
 color: var(--accent-color);
 text-decoration: none;
 font-family: 'Montserrat', sans-serif;
-font-size: 0.95rem;
+font-size: 0.9rem;
 }
-.contact-form { display: flex; flex-direction: column; gap: 20px; }
-.form-group { display: flex; flex-direction: column; gap: 8px; }
-.form-group label { color: var(--text-color); font-size: 0.9rem; font-weight: 500; }
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { color: var(--text-color); font-size: 0.85rem; font-weight: 500; }
 .form-group input, .form-group select, .form-group textarea {
-padding: 14px 15px;
+padding: 12px 14px;
 background: #fff;
 border: 1px solid var(--border-color);
 border-radius: 5px;
 color: var(--text-color);
 font-family: 'Montserrat', sans-serif;
-font-size: 1rem;
+font-size: 0.95rem;
 transition: 0.3s;
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
@@ -445,27 +439,27 @@ outline: none;
 border-color: var(--accent-color);
 box-shadow: 0 0 0 3px rgba(201, 168, 124, 0.15);
 }
-.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
 .form-group select option { background: #fff; color: var(--text-color); }
 .submit-btn {
 background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
 color: #fff;
-padding: 15px 30px;
+padding: 14px 28px;
 border: none;
 border-radius: 5px;
-font-size: 1rem;
+font-size: 0.95rem;
 font-weight: 500;
 cursor: pointer;
 transition: 0.3s;
-margin-top: 10px;
+margin-top: 8px;
 letter-spacing: 0.5px;
 }
 .submit-btn:hover {
 transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(201, 168, 124, 0.3);
+box-shadow: 0 8px 25px rgba(201, 168, 124, 0.3);
 }
 .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-.form-message { padding: 15px; border-radius: 8px; margin-top: 15px; display: none; }
+.form-message { padding: 12px; border-radius: 8px; margin-top: 12px; display: none; }
 .form-message.success {
 background: rgba(124, 179, 66, 0.1);
 border: 1px solid var(--success);
@@ -480,11 +474,11 @@ display: block;
 }
 footer {
 text-align: center;
-padding: 40px 0;
+padding: 35px 0;
 border-top: 1px solid var(--border-color);
-margin-top: 80px;
+margin-top: 70px;
 color: var(--text-light);
-font-size: 0.9rem;
+font-size: 0.85rem;
 }
 footer a { color: var(--accent-color); text-decoration: none; }
 .scroll-progress {
@@ -497,14 +491,15 @@ z-index: 1000;
 transition: width 0.1s;
 }
 @media (max-width: 768px) {
-.hero h1 { font-size: 2.5rem; }
-.contact-grid { grid-template-columns: 1fr; gap: 40px; }
-.contact-section { padding: 40px 25px; }
+.hero h1 { font-size: 2.3rem; }
+.contact-grid { grid-template-columns: 1fr; gap: 35px; }
+.contact-section { padding: 35px 20px; }
 .pricing-card.featured { transform: none; }
-.pricing-card.featured:hover { transform: translateY(-10px); }
+.pricing-card.featured:hover { transform: translateY(-8px); }
 nav { display: none; }
 .header-contacts { display: none; }
-.section-title { font-size: 2rem; }
+.section-title { font-size: 1.8rem; }
+.pricing-grid { grid-template-columns: 1fr; }
 }
 .typing-container {
 display: inline-block;
@@ -534,8 +529,7 @@ margin-left: 2px;
 <header data-aos="fade-down" data-aos-duration="1000">
 <div class="logo">Katerina<span> Kinn</span></div>
 <nav><ul>
-<li><a href="#services">Услуги</a></li>
-<li><a href="#pricing">Стоимость</a></li>
+<li><a href="#pricing">Услуги</a></li>
 <li><a href="#advantages">Обо мне</a></li>
 <li><a href="#contact">Контакты</a></li>
 </ul></nav>
@@ -553,7 +547,7 @@ margin-left: 2px;
 <p data-aos="fade-up" data-aos-delay="600">Профессиональная фотосъёмка с душой и вниманием к деталям. Индивидуальный подход, тёплая атмосфера, живые эмоции в каждом кадре.</p>
 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
 <a href="#contact" class="btn">Записаться на съёмку</a>
-<a href="#pricing" class="btn-outline">Смотреть пакеты</a>
+<a href="#pricing" class="btn-outline">Смотреть цены</a>
 </div>
 <div class="photo-frame" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1200">
 <div class="frame-placeholder">«Фотография — это искусство запечатлеть момент,<br>который останется в сердце навсегда»</div>
@@ -561,50 +555,182 @@ margin-left: 2px;
 </section>
 
 <section id="pricing" class="section">
-<h2 class="section-title" data-aos="fade-up">Пакеты услуг</h2>
+<h2 class="section-title" data-aos="fade-up">Услуги и цены</h2>
 <div class="pricing-grid">
+
+<!-- Love Story -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-<div class="pricing-header"><h3 class="pricing-name">Экспресс-съёмка</h3><p class="pricing-description">Короткая фотосессия для соцсетей и портфолио</p><div class="pricing-price">5 000 ₽</div></div>
-<ul class="pricing-features"><li>30 минут съёмки</li><li>1 локация в Санкт-Петербурге</li><li>15 фото в авторской обработке</li><li>Все исходники в цветокоррекции</li><li>Готовность: 3-5 дней</li><li>Помощь в позировании</li></ul>
-<div class="pricing-note">✦ Идеально для: контента в соцсети, обновления аватара, быстрого портрета</div>
+<div class="pricing-header">
+<h3 class="pricing-name">💕 Love Story</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
 </div>
-<div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-<div class="pricing-header"><h3 class="pricing-name">Индивидуальная съёмка</h3><p class="pricing-description">Полноценная фотосессия для создания портфолио</p><div class="pricing-price">10 000 ₽</div></div>
-<ul class="pricing-features"><li>1.5 часа съёмки</li><li>1-2 локации на выбор</li><li>40 фото в авторской обработке</li><li>Все исходники в цветокоррекции</li><li>Помощь в подборе образа</li><li>Рекомендации по позированию</li><li>Готовность: 7-10 дней</li><li>Онлайн-галерея для просмотра</li></ul>
-<div class="pricing-note">✦ Идеально для: личного бренда, портфолио, подарка себе или близким</div>
+<ul class="pricing-features">
+<li>Романтическая съёмка для пары</li>
+<li>1 локация в СПб</li>
+<li>20 фото в обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Помощь в позировании</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: влюблённых, годовщины, предложения</div>
 </div>
+
+<!-- В ожидании чуда -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="150">
+<div class="pricing-header">
+<h3 class="pricing-name">🤰 В ожидании чуда</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Нежная съёмка для беременных</li>
+<li>1 локация</li>
+<li>20 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Комфортная атмосфера</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: будущих мам, трогательных кадров</div>
+</div>
+
+<!-- Выписка из роддома -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+<div class="pricing-header">
+<h3 class="pricing-name">👶 Выписка из роддома</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Трогательные первые кадры</li>
+<li>Съёмка у роддома</li>
+<li>20 фото в обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Эмоции встречи с малышом</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: семей, встречающих новорождённого</div>
+</div>
+
+<!-- Прогулка по Питеру -->
+<div class="pricing-card featured" data-aos="fade-up" data-aos-delay="250">
+<div class="pricing-header">
+<h3 class="pricing-name">🏛️ Прогулка по Питеру</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Атмосферная съёмка в городе</li>
+<li>Знаковые локации СПб</li>
+<li>25 фото в авторской обработке</li>
+<li>Все исходники в цветокоррекции</li>
+<li>Помощь в позировании</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: туристов, прогулок, контент-съёмки</div>
+</div>
+
+<!-- Праздники -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-<div class="pricing-header"><h3 class="pricing-name">Love Story</h3><p class="pricing-description">Романтическая фотосессия для пары</p><div class="pricing-price">12 000 ₽</div></div>
-<ul class="pricing-features"><li>2 часа съёмки</li><li>2 локации в Санкт-Петербурге</li><li>50 фото в авторской обработке</li><li>Все исходники в цветокоррекции</li><li>Помощь в создании образа</li><li>Романтическая атмосфера</li><li>Готовность: 10-14 дней</li><li>Онлайн-галерея</li></ul>
-<div class="pricing-note">✦ Идеально для: влюблённых пар, годовщины, предложения руки и сердца</div>
+<div class="pricing-header">
+<h3 class="pricing-name">🎉 Праздники</h3>
+<div class="pricing-duration">от 1 часа</div>
+<div class="pricing-price">от 5 000 ₽</div>
 </div>
+<ul class="pricing-features">
+<li>Репортажная съёмка мероприятия</li>
+<li>Живые эмоции гостей</li>
+<li>Любая локация</li>
+<li>От 20 фото в час</li>
+<li>Все исходники в цветокоррекции</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: дней рождений, корпоративов, выпускных</div>
+</div>
+
+<!-- Семейная -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="350">
+<div class="pricing-header">
+<h3 class="pricing-name">👨‍👩‍👧‍👦 Семейная съёмка</h3>
+<div class="pricing-duration">1 час</div>
+<div class="pricing-price">5 000 ₽</div>
+</div>
+<ul class="pricing-features">
+<li>Тёплые кадры для всей семьи</li>
+<li>До 5 человек в кадре</li>
+<li>1 локация</li>
+<li>25 фото в авторской обработке</li>
+<li>Работа с детьми</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: семейных историй, дней рождения</div>
+</div>
+
+<!-- Свадьба -->
 <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
-<div class="pricing-header"><h3 class="pricing-name">Семейная съёмка</h3><p class="pricing-description">Тёплые кадры для всей семьи</p><div class="pricing-price">15 000 ₽</div></div>
-<ul class="pricing-features"><li>2 часа съёмки</li><li>До 5 человек в кадре</li><li>1-2 локации</li><li>60 фото в авторской обработке</li><li>Все исходники в цветокоррекции</li><li>Работа с детьми</li><li>Готовность: 10-14 дней</li><li>Онлайн-галерея</li></ul>
-<div class="pricing-note">✦ Идеально для: семейных историй, дней рождения, беременности</div>
+<div class="pricing-header">
+<h3 class="pricing-name">💍 Свадьба</h3>
+<div class="pricing-duration">от 3 часов</div>
+<div class="pricing-price">от 10 000 ₽</div>
 </div>
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
-<div class="pricing-header"><h3 class="pricing-name">Свадебная съёмка</h3><p class="pricing-description">Полное сопровождение вашего важного дня</p><div class="pricing-price">от 35 000 ₽</div></div>
-<ul class="pricing-features"><li>Полный съёмочный день (до 10 часов)</li><li>Два фотографа по запросу</li><li>От 300 фото в обработке</li><li>Все исходники</li><li>Выезд за пределы СПб</li><li>Фотокнига в подарок</li><li>Готовность: 30-45 дней</li><li>Индивидуальный альбом</li></ul>
-<div class="pricing-note">✦ Идеально для: свадеб, выездных регистраций, камерных торжеств</div>
+<ul class="pricing-features">
+<li>Съёмка важного дня</li>
+<li>Репортаж + постановочные кадры</li>
+<li>От 100 фото в обработке</li>
+<li>Все исходники</li>
+<li>Выезд за пределы СПб</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: камерных свадеб, выездных регистраций</div>
 </div>
-<div class="pricing-card" data-aos="fade-up" data-aos-delay="600">
-<div class="pricing-header"><h3 class="pricing-name">Контент-съёмка</h3><p class="pricing-description">Фото для бизнеса и социальных сетей</p><div class="pricing-price">от 8 000 ₽/час</div></div>
-<ul class="pricing-features"><li>От 1 часа съёмки</li><li>Предметная и репортажная съёмка</li><li>Фото для Instagram, сайта</li><li>Обработка под брендбук</li><li>Помощь с концепцией</li><li>Срочная отдача (от 2 дней)</li><li>Возможность видео</li></ul>
-<div class="pricing-note">✦ Идеально для: брендов, экспертов, магазинов, ресторанов</div>
+
+<!-- Роспись + прогулка -->
+<div class="pricing-card" data-aos="fade-up" data-aos-delay="450">
+<div class="pricing-header">
+<h3 class="pricing-name">📜 Роспись + прогулка</h3>
+<div class="pricing-duration">3-4 часа</div>
+<div class="pricing-price">15 000 ₽</div>
 </div>
+<ul class="pricing-features">
+<li>Съёмка в ЗАГСе</li>
+<li>Прогулка по городу (1-2 локации)</li>
+<li>Романтические кадры</li>
+<li>От 150 фото в обработке</li>
+<li>Все исходники</li>
+<li>Помощь в позировании</li>
+</ul>
+<div class="pricing-note">✦ Идеально для: пар, желающих запечатлеть день регистрации</div>
+</div>
+
 </div>
 </section>
 
 <section id="advantages" class="section">
 <h2 class="section-title" data-aos="fade-up">Почему выбирают меня</h2>
 <div class="advantages-grid">
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="100"><div class="advantage-icon">📸</div><h3>Профессиональное оборудование</h3><p>Работаю на технику Canon Sony, использую профессиональную оптику и свет</p></div>
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="200"><div class="advantage-icon">🎨</div><h3>Авторская обработка</h3><p>Каждое фото проходит тщательную ретушь в моём уникальном стиле</p></div>
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="300"><div class="advantage-icon">💕</div><h3>Тёплая атмосфера</h3><p>Помогу расслабиться перед камерой, даже если вы снимаетесь впервые</p></div>
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="400"><div class="advantage-icon">🏛️</div><h3>Знаю лучшие локации</h3><p>Порекомендую идеальные места для съёмки в Санкт-Петербурге и области</p></div>
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="500"><div class="advantage-icon">⏱️</div><h3>Соблюдение сроков</h3><p>Готовые фото вы получите точно в оговоренное время без задержек</p></div>
-<div class="advantage-card" data-aos="fade-up" data-aos-delay="600"><div class="advantage-icon">✨</div><h3>Индивидуальный подход</h3><p>Учитываю все ваши пожелания и помогаю создать идеальный образ</p></div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+<div class="advantage-icon">📸</div>
+<h3>Профессиональное оборудование</h3>
+<p>Работаю на технику Canon/Sony, использую профессиональную оптику и свет</p>
+</div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+<div class="advantage-icon">🎨</div>
+<h3>Авторская обработка</h3>
+<p>Каждое фото проходит тщательную ретушь в моём уникальном стиле</p>
+</div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+<div class="advantage-icon">💕</div>
+<h3>Тёплая атмосфера</h3>
+<p>Помогу расслабиться перед камерой, даже если вы снимаетесь впервые</p>
+</div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
+<div class="advantage-icon">🏛️</div>
+<h3>Знаю лучшие локации</h3>
+<p>Порекомендую идеальные места для съёмки в Санкт-Петербурге и области</p>
+</div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="500">
+<div class="advantage-icon">⏱️</div>
+<h3>Соблюдение сроков</h3>
+<p>Готовые фото вы получите точно в оговоренное время без задержек</p>
+</div>
+<div class="advantage-card" data-aos="fade-up" data-aos-delay="600">
+<div class="advantage-icon">✨</div>
+<h3>Индивидуальный подход</h3>
+<p>Учитываю все ваши пожелания и помогаю создать идеальный образ</p>
+</div>
 </div>
 </section>
 
@@ -616,13 +742,31 @@ margin-left: 2px;
 <h3>Давайте создадим красивые кадры вместе!</h3>
 <p>Заполните форму, и я свяжусь с вами в течение часа для обсуждения деталей съёмки</p>
 <div class="contact-methods">
-<div class="contact-method"><div class="contact-method-icon">📞</div><div class="contact-method-text"><h4>Телефон</h4><a href="tel:+79312017822">+7 (931) 201-78-22</a></div></div>
-<div class="contact-method"><div class="contact-method-icon">✈️</div><div class="contact-method-text"><h4>Telegram</h4><a href="https://t.me/kinneva" target="_blank">@kinneva</a></div></div>
-<div class="contact-method"><div class="contact-method-icon">📍</div><div class="contact-method-text"><h4>Город</h4><span>Санкт-Петербург</span></div></div>
+<div class="contact-method">
+<div class="contact-method-icon">📞</div>
+<div class="contact-method-text">
+<h4>Телефон</h4>
+<a href="tel:+79312017822">+7 (931) 201-78-22</a>
 </div>
-<div style="background: rgba(201, 168, 124, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-color);">
-<strong style="color: var(--accent-color); display: block; margin-bottom: 10px;">✦ Бесплатная консультация</strong>
-<p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Помогу выбрать идеальный пакет под ваши задачи и бюджет. Отвечу на все вопросы по организации съёмки.</p>
+</div>
+<div class="contact-method">
+<div class="contact-method-icon">✈️</div>
+<div class="contact-method-text">
+<h4>Telegram</h4>
+<a href="https://t.me/kinneva" target="_blank">@kinneva</a>
+</div>
+</div>
+<div class="contact-method">
+<div class="contact-method-icon">📍</div>
+<div class="contact-method-text">
+<h4>Город</h4>
+<span>Санкт-Петербург</span>
+</div>
+</div>
+</div>
+<div style="background: rgba(201, 168, 124, 0.1); padding: 18px; border-radius: 8px; border-left: 3px solid var(--accent-color);">
+<strong style="color: var(--accent-color); display: block; margin-bottom: 8px;">✦ Бесплатная консультация</strong>
+<p style="color: var(--text-light); font-size: 0.85rem; margin: 0;">Помогу выбрать идеальный пакет под ваши задачи и бюджет. Отвечу на все вопросы по организации съёмки.</p>
 </div>
 </div>
 <form class="contact-form" id="contactForm">
@@ -632,16 +776,18 @@ margin-left: 2px;
 <div class="form-group"><label for="serviceType">Тип съёмки *</label>
 <select id="serviceType" name="serviceType" required>
 <option value="">Выберите тип съёмки</option>
-<option value="Экспресс-съёмка (5 000 ₽)">Экспресс-съёмка — 5 000 ₽</option>
-<option value="Индивидуальная съёмка (10 000 ₽)">Индивидуальная съёмка — 10 000 ₽</option>
-<option value="Love Story (12 000 ₽)">Love Story — 12 000 ₽</option>
-<option value="Семейная съёмка (15 000 ₽)">Семейная съёмка — 15 000 ₽</option>
-<option value="Свадебная съёмка (от 35 000 ₽)">Свадебная съёмка — от 35 000 ₽</option>
-<option value="Контент-съёмка (от 8 000 ₽/час)">Контент-съёмка — от 8 000 ₽/час</option>
+<option value="Love Story (5 000 ₽)">Love Story — 5 000 ₽</option>
+<option value="В ожидании чуда (5 000 ₽)">В ожидании чуда — 5 000 ₽</option>
+<option value="Выписка из роддома (5 000 ₽)">Выписка из роддома — 5 000 ₽</option>
+<option value="Прогулка по Питеру (5 000 ₽)">Прогулка по Питеру — 5 000 ₽</option>
+<option value="Праздники (от 5 000 ₽)">Праздники — от 5 000 ₽</option>
+<option value="Семейная съёмка (5 000 ₽)">Семейная съёмка — 5 000 ₽</option>
+<option value="Свадьба (от 10 000 ₽)">Свадьба — от 10 000 ₽</option>
+<option value="Роспись + прогулка (15 000 ₽)">Роспись + прогулка — 15 000 ₽</option>
 <option value="Пока не определился">Пока не определился, нужна консультация</option>
 </select>
 </div>
-<div class="form-group"><label for="message">Пожелания к съёмке *</label><textarea id="message" name="message" required placeholder="Расскажите о вашей идее: желаемая дата, локация, особые пожелания, количество человек..."></textarea></div>
+<div class="form-group"><label for="message">Пожелания к съёмке *</label><textarea id="message" name="message" required placeholder="Расскажите о вашей идее: желаемая дата, локация, особые пожелания..."></textarea></div>
 <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
 <div id="formMessage" class="form-message"></div>
 </form>
@@ -651,8 +797,8 @@ margin-left: 2px;
 
 <footer>
 <p>© 2024 Катерина Кинн. Профессиональный фотограф Санкт-Петербург.</p>
-<p style="margin-top: 10px; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-style: italic;">✦ Снято с <span style="color: var(--accent-color);">любовью</span> и вдохновением ✦</p>
-<p style="margin-top: 15px; font-size: 0.85rem;">
+<p style="margin-top: 8px; font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-style: italic;">✦ Снято с <span style="color: var(--accent-color);">любовью</span> и вдохновением ✦</p>
+<p style="margin-top: 12px; font-size: 0.8rem;">
 <a href="https://t.me/kinneva" target="_blank">Telegram</a> •
 <a href="https://instagram.com" target="_blank">Instagram</a> •
 <a href="https://vk.com" target="_blank">VK</a>
@@ -721,7 +867,7 @@ e.target.value = f;
 }
 });
 
-// ✅ ИСПРАВЛЕННАЯ ОТПРАВКА ФОРМЫ — без API, без 502 ошибки
+// ✅ ОТПРАВКА ФОРМЫ — без API, без 502 ошибки
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const formMessage = document.getElementById('formMessage');
@@ -733,7 +879,6 @@ submitBtn.textContent = 'Отправка...';
 formMessage.className = 'form-message';
 formMessage.style.display = 'none';
 
-// Симуляция отправки (статический сайт не может отправлять данные на сервер без backend)
 setTimeout(() => {
 formMessage.textContent = '✦ Спасибо! Я свяжусь с вами в ближайшее время по телефону или в Telegram.';
 formMessage.className = 'form-message success';
